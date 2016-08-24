@@ -134,7 +134,9 @@ public class OAuth2Module: AuthzModule {
                 self.webView!.targetURL = url
                 config.webViewHandler(self.webView!, completionHandler: completionHandler)
             } else {
-                UIApplication.sharedApplication().openURL(url)
+                dispatch_async(dispatch_get_main_queue()) {
+                    UIApplication.sharedApplication().openURL(url)
+                }
             }
         }
     }
