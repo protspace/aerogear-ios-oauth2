@@ -10,5 +10,5 @@ Pod::Spec.new do |s|
   s.source_files = 'AeroGearOAuth2/*.{swift}'
   s.requires_arc = true
   s.framework = 'Security'
-  s.dependency 'AeroGearHttp', '0.7.0'
+  s.dependency 'AeroGearHttp', :git=> 'https://github.com/protspace/aerogear-ios-http.git'
 end
